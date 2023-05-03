@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>股票计算器</title>
+</head>
+<body>
+    <form action="/search-post/" method="post">
+        {% csrf_token %}
+        <p>股票代码：<input type="text" name="code"></p>
+        <p>天数：<input type="text" name="days"></p>
+        <p>截至日期：<input type="text" name="date"></p>
+        <input type="submit" value="开始计算">
+    </form>
+
+<p>日期:{{mydata}} </P>
+
+    <p>股票代码：{{ code }},天数:{{days}},截至日期:{{date}}</p>
+</body>
+</html>
